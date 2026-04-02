@@ -10,6 +10,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+require 'plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/tnrdevelopmentstudio/tnr-gateway-rotator',
+	__FILE__,
+	'tnr_gateway_rotator'
+);
+
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
+
+//Optional: If you're using a private repository, specify the access token like this:
+$myUpdateChecker->setAuthentication('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');
+
 class TNR_Gateway_Rotator_Dynamic {
 	const OPTION_KEY         = 'TNR_gateway_rotator_dynamic_settings';
 	const ACTIVE_GATEWAY_KEY = 'TNR_gateway_rotator_dynamic_active_gateway';
