@@ -2,7 +2,7 @@
 /**
  * Plugin Name: TNR Development Studio Gateway Rotator
  * Description: Dynamically discovers WooCommerce payment gateways and controls checkout visibility using three states: Invisible, Visible (Rotating), and Always Visible.
- * Version: 2.1.0
+ * Version: 2.1.1
  * Author: TNR Development Studio
  */
 
@@ -23,7 +23,7 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 $myUpdateChecker->setBranch('main');
 
 //Optional: If you're using a private repository, specify the access token like this:
-$myUpdateChecker->setAuthentication('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');
+$myUpdateChecker->setAuthentication('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');
 
 class TNR_Gateway_Rotator_Dynamic {
 	const OPTION_KEY         = 'TNR_gateway_rotator_dynamic_settings';
